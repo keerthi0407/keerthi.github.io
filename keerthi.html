@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*navbar*/
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+        }
+        
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+        
+        .navbar ul li {
+            font-family: century;
+            font-size: rem;
+            font-weight: bold;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all.5s ease;
+        }
+        
+        .navbar ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 5px 5px 5px purple;
+        }
+        /*home section*/
+        
+        #home {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf4Vff9SjSy7Ppp_jfPYLjy9-eog5MfxP_Ow&usqp=CAU");
+            background-size: cover;
+            height: 840px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: -5;
+            opacity: .8;
+        }
+        
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 30%;
+            right: 10%;
+        }
+        
+        .headings {
+            font-family: century;
+            font-size: 2rem;
+            text-align: center;
+            margin: 40px 0px;
+        }
+        
+        .btn {
+            color: black;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px 15px;
+            display: inline-block;
+            font-weight: 500;
+            transition: all .4s ease-in-out;
+            background-size: 152% 100%;
+            background: white;
+            border: 2px solid whitesmoke;
+        }
+        
+        .btn:hover {
+            background: fuchsia;
+            border-color: gold;
+            color: #a52a2a;
+            box-shadow: 0px 5px 5px goldenrod;
+        }
+        /*about*/
+        
+        #about {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 10px
+        }
+        
+        #pic {
+            display: flex;
+        }
+        
+        #pic img {
+            width: 575px;
+            height: 300px;
+        }
+        
+        #intro {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            padding: 10px;
+        }
+        
+        #intro h2 {
+            font-size: 2 rem;
+            margin-bottom: 20px;
+        }
+        /*gallery section*/
+        
+        #gallery {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0.5, 0.5, 0.9);
+            color: white;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+        
+        .gallery img {
+            width: 400px;
+            height: 300px;
+            margin: 5px;
+        }
+        /*skills*/
+        
+        #skills {
+            display: flex;
+            flex-direction: column;
+            padding: 100px;
+            background-color: aquamarine;
+        }
+        
+        #pic {
+            display: flex;
+        }
+        
+        #pic img {
+            width: 575px;
+            height: 500px;
+            padding: 10px;
+            border: #a52a2a;
+            position: relative;
+            border-radius: 40px;
+            background-color: gray;
+        }
+        
+        .container {
+            padding: 10px;
+            width: 300px;
+            height: 400px;
+            margin: 50px auto 0;
+            background-color: hotpink;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            align-items: center;
+        }
+        
+        .container :hover {
+            width: 300px;
+            height: 400px;
+            background-color: indigo;
+            color: white;
+            box-shadow: 10px white;
+            transition: all .5s ease;
+            border-radius: 10px;
+        }
+        /*contact*/
+        
+        #contact-btn {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: #F4F7FF;
+            margin: 20px 0px;
+            box-sizing: border-box;
+            box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .c-b-heading {
+            font-size: 2rem;
+            color: #1E1E1E;
+            font-family: calibri;
+            margin: 10px;
+            padding: 5px;
+            letter-spacing: 4px;
+            border-bottom: 2px solid #1E1E1E;
+        }
+        
+        #contact-btn button {
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-family: calibri;
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+            background-color: #1E1E1E;
+            border: none;
+            outline: none;
+            box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        #contact-btn button:hover {
+            background-color: #17d1ac;
+            color: #000000;
+            transition: all ease 0.5s;
+            font-weight: bold;
+        }
+        
+        #contact-form {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #contact-form form {
+            display: flex;
+            width: 70%;
+            height: 60vh;
+            background-color: gray;
+            box-shadow: 2px 12px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.01)
+        }
+        
+        .contact-left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-right {
+            width: 60%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid rgba(210, 29, 29, 0.08);
+        }
+        
+        .contact-right button {
+            width: 100%;
+            height: 50px;
+            background-color: cornflowerblue;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            margin: 0px;
+            color: black;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .c-l-heading {
+            font-family: calibri;
+            color: black;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        
+        .f-name,
+        .f-email {
+            display: flex;
+            flex-direction: column;
+            font-family: calibri;
+            color: green
+        }
+        
+        .f-name font,
+        .f-email font {
+            color: hotpink;
+            font-size: 22px;
+        }
+        
+        .f-name input,
+        .f-email input {
+            height: 30px;
+            width: 250px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid black;
+            color: black;
+            margin: 10px 0px;
+        }
+        
+        .f-email input::placeholder,
+        .f-name input::placeholder {
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+        
+        .f-email input:focus,
+        .f-name input:focus {
+            border-bottom: 1px solid black;
+            transition: all ease 0.5s;
+        }
+        
+        .message font {
+            font-size: 18px;
+            color: hotpink;
+            font-family: calibri;
+        }
+        
+        .message {
+            margin: 20px;
+        }
+        
+        .contact-right textarea {
+            width: 100% !important;
+            height: 320px !important;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            box-sizing: border-box;
+            color: #EBEBEB;
+            font-size: 16px;
+        }
+        
+        .contact-right textarea::placeholder {
+            color: #EBEBEB;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-family: calibri;
+        }
+        
+        .contact-right button:active {
+            transform: scale(1.04);
+            transition: all ease 0.1s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class=" navbar ">
+        <ul>
+            <li><a href="/Home / ">Home</a></li>
+            <li><a href="/About Me / ">About Me</a></li>
+            <li><a href="/Gallery/ ">Gallery</a></li>
+            <li><a href="/skills/ ">Skills</a></li>
+            <li><a href=" # ">Contact Me</a></li>
+        </ul>
+
+
+
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I AM <br> P.KEERTHI REDDY.</h1>
+            <a href="#" class="btn"><b>LEARNER</b></a>
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="headings ">ABOUT ME</h1>
+        <div id="pic">
+            <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf4Vff9SjSy7Ppp_jfPYLjy9-eog5MfxP_Ow&usqp=CAU ">-->
+            <img src="https://res.cloudinary.com/dwzvwkp9j/image/upload/v1661770755/keerthi_fz2cph.jpg">
+            <div id="intro">
+                <h2>IT'S ME KEERTHI</h2>
+                <p>Myself I'm P.Keerthi Reddy. I am from Proddatur near Kadapa(Dist).Currently I am studyig in VIT-AP university to pursue my btech degree.I am here as a CSE student.I am very much interested in coding.Recently i joined in SPM club, which
+                    gave me a confidence on my works.I am a self motivated person.I love playing badminton and i am enormously interestd in games. I really love to listem music in my free times and i am ineterested in gardening. I love to explore new
+                    things through travelling.
+
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="gallery">
+        <h1 class="headings">GALLERY</h1>
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-Y0Wr3RtzuKcBRXELL_2bYW-0zH8TjqV5w&usqp=CAU ">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9N0FHZTnQP60Q5eM1qx5yamcgYB7yZUang&usqp=CAU ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ122OejCRlgULM7595rTfC5Z5XuMCp16HRLQ&usqp=CAU">
+
+
+        </div>
+    </section>
+    <section id="skills">
+        <h1 class="headings ">SKILLS</h1>
+        <div id="pic">
+            <img src="https://media.istockphoto.com/photos/concept-of-soft-skills-mind-map-in-handwritten-style-picture-id1341328946?b=1&k=20&m=1341328946&s=170667a&w=0&h=91YK_ZDQAbHxBZbJhiC2hjGZHpVq3tV55cn2voTcLfY=">
+            <div class="container">
+
+                <p>I am pretty decent in communication skills.I have a basic knowledge about java,python,HTML, CSS. I am good at web designing.I can understand the things fast.
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!--Contact-btn------------------>
+    <section id="contact-btn">
+        <!--heading-------------->
+        <h1 class="c-b-heading">If You Want to Text Me ?</h1>
+        <!--btn-------->
+        <button>Contact Me</button>
+    </section>
+    <!--contact-form------------------->
+
+    <section id="contact-form">
+        <form>
+            <!--left--------------------------------------->
+            <div class="contact-left">
+                <h1 class="c-l-heading">
+                    <font style="border-bottom: 3px solid green;">Tex</font>t here</h1>
+                <!--name-------->
+                <div class="f-name">
+                    <font>Name</font>
+                    <input type="text" placeholder="Full Name" />
+                </div>
+                <!--email-------->
+                <div class="f-email">
+                    <font>Email</font>
+                    <input type="email" placeholder="Example@gmail.com" />
+                </div>
+            </div>
+            <!--right------------------------------------------->
+            <div class="contact-right">
+                <!--message-------->
+                <div class="message">
+                    <font>Message</font>
+                    <textarea name="message" rows="5" cols="20" placeholder="Type Your Message..."></textarea>
+                </div>
+                <!--submit-btn------------>
+                <button>submit</button>
+            </div>
+
+        </form>
+    </section>
+
+
+
+</body>
+
+</html>
